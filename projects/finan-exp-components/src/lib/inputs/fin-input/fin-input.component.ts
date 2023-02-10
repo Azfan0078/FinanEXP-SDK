@@ -1,0 +1,42 @@
+import { Component, forwardRef, Input } from '@angular/core';
+import { NG_VALIDATORS, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { MustHaveControlName } from '../../common/MustHaveControlName';
+import { inputMask } from './inputMask';
+
+@Component({
+  selector: 'fin-input',
+  templateUrl: './fin-input.component.html',
+  styleUrls: ['./fin-input.component.css'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: forwardRef(() => FinInputComponent),
+    },
+    {
+      provide: NG_VALIDATORS,
+      multi: true,
+      useExisting: FinInputComponent,
+    },
+  ],
+})
+export class FinInputComponent extends MustHaveControlName {
+  @Input() public type!: string;
+  @Input() public placeholder = '';
+  @Input() public label!: string;
+  @Input() public required!: boolean;
+  @Input() public hint!: string;
+  @Input() public mask?: inputMask;
+  @Input() public controlName!:string;
+  override value = '';
+  public showPassword = false;
+
+  override writeValue(value: string): void {
+    this.value = value;
+  }
+
+  public inputChanges(): void {
+    this.markAsTouched();
+    this.onChange(this.value);
+  }
+}

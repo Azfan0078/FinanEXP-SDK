@@ -7,12 +7,19 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
-      "finanEXP-components": [
+      "finan-exp-components": [
         "dist/finan-exp-components"
+      ],
+      "finan-exp-pipes": [
+        "dist/finan-exp-pipes"
+      ],
+      "finan-exp-services": [
+        "dist/finan-exp-services"
       ]
     },
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -29,6 +36,7 @@
     ]
   },
   "angularCompilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,

@@ -1,7 +1,11 @@
 /*
  * Public API Surface of finan-exp-components
  */
-
-export * from './lib/finan-exp-components.service';
-export * from './lib/finan-exp-components.component';
+export * from './lib/buttons'
+export * from './lib/cards'
+export * from './lib/common'
+export * from './lib/dialogs'
+export * from './lib/inputs'
+export * from './lib/select'
+export * from './lib/tables'
 export * from './lib/finan-exp-components.module';

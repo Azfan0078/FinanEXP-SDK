@@ -97,7 +97,7 @@
         }
       }
     },
-    "finanEXP-components": {
+    "finan-exp-components": {
       "projectType": "library",
       "root": "projects/finan-exp-components",
       "sourceRoot": "projects/finan-exp-components/src",
@@ -124,6 +124,99 @@
             "main": "projects/finan-exp-components/src/test.ts",
             "tsConfig": "projects/finan-exp-components/tsconfig.spec.json",
             "karmaConfig": "projects/finan-exp-components/karma.conf.js"
+          }
+        }
+      }
+    },
+    "finan-exp-pipes": {
+      "projectType": "library",
+      "root": "projects/finan-exp-pipes",
+      "sourceRoot": "projects/finan-exp-pipes/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/finan-exp-pipes/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/finan-exp-pipes/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/finan-exp-pipes/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/finan-exp-pipes/src/test.ts",
+            "tsConfig": "projects/finan-exp-pipes/tsconfig.spec.json",
+            "karmaConfig": "projects/finan-exp-pipes/karma.conf.js"
+          }
+        }
+      }
+    },
+    "test": {
+      "projectType": "library",
+      "root": "projects/test",
+      "sourceRoot": "projects/test/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/test/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/test/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/test/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/test/src/test.ts",
+            "tsConfig": "projects/test/tsconfig.spec.json",
+            "karmaConfig": "projects/test/karma.conf.js"
+          }
+        }
+      }
+    },
+    "finan-exp-services": {
+      "projectType": "library",
+      "root": "projects/finan-exp-services",
+      "sourceRoot": "projects/finan-exp-services/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/finan-exp-services/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/finan-exp-services/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/finan-exp-services/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/finan-exp-services/src/test.ts",
+            "tsConfig": "projects/finan-exp-services/tsconfig.spec.json",
+            "karmaConfig": "projects/finan-exp-services/karma.conf.js"
           }
         }
       }
