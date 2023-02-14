@@ -1,0 +1,13 @@
+<ng-container *ngIf="!smallScreen">
+  <mat-sidenav-container autosize>
+    <mat-sidenav class="mat-sidenav" [class.mat-elevation-z3]="true" #sidenav mode="side" opened="{{ isExtended }}">
+      <nav-menu [navMenuItens]="navMenuItens"></nav-menu>
+    </mat-sidenav>
+    <mat-sidenav-content [ngStyle]="{'background-color': mainColor}">
+      <ng-content></ng-content>
+      <button mat-mini-fab id="chevronButton" (click)="isExtended = !isExtended">
+        <mat-icon class="chevron-button" mat-list-icon [ngClass]="{ rotated: isExtended }">chevron_right</mat-icon>
+      </button>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</ng-container>

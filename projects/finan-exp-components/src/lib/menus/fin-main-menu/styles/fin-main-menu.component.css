@@ -1,0 +1,38 @@
+mat-sidenav-container {
+    height: 100%;
+}
+nav-menu {
+    height: 100%;
+    display: flex;
+}
+#chevronButton {
+    position: absolute;
+    left: 1%;
+    bottom: 2%;
+    background-color: gray;
+    color: white;
+}
+
+.chevron-button {
+    transform: rotate(0deg);
+}
+
+.chevron-button.rotated {
+    transform: rotate(180deg);
+}
+
+/*Extra-large*/
+@media only screen and (min-width: 1200px) {
+  
+}
+/*Extra-small*/
+@media only screen and (max-width:600px) {
+ 
+}
+/*Medium*/
+@media (min-width:768px) and (max-width:1200px) {
+}
+/*Small*/
+@media (min-width:600px) and (max-width:768px) {
+  
+}

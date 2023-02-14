@@ -1,0 +1,11 @@
+<form [formGroup]="form" *ngIf="form">
+  <fin-input
+    label="Fin input"
+    type="text"
+    placeholder="Nome"
+    [formControlName]="formControls.finInput"
+    hint="O nome não pode conter espaços em branco desnecessários."
+    [required]="true"
+  >
+  </fin-input>
+</form>

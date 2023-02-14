@@ -1,0 +1,55 @@
+mat-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+mat-nav-list>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div#upper {
+    width: 100%;
+}
+
+div#middle {
+    height: 90%;
+    width: 100%;
+}
+
+div#down {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.menu-item {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+/*Extra-large*/
+@media only screen and (min-width: 1200px) {
+  
+}
+/*Extra-small*/
+@media only screen and (max-width:600px) {
+ 
+}
+/*Medium*/
+@media (min-width:768px) and (max-width:1200px) {
+}
+/*Small*/
+@media (min-width:600px) and (max-width:768px) {
+  
+}
