@@ -1,3 +1,4 @@
+import { CommonService } from 'finan-exp-services';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogControlService } from './dialogControl/dialog-control.service';
 import { SnackBarControlService } from './snackBarControl/snack-bar-control.service';
@@ -10,7 +11,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatDialogModule
   ],
   providers: [
-    SnackBarControlService, DialogControlService
+    SnackBarControlService, DialogControlService, CommonService
   ]
 })
 export class FinanEXPServicesModule { }

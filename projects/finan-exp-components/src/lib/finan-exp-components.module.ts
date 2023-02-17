@@ -6,6 +6,7 @@ import { DialogsModule } from "./dialogs/dialogs.module";
 import { InputsModule } from "./inputs/inputs.module";
 import { SelectModule } from "./select/select.module";
 import { TablesModule } from "./tables/tables.module";
+import { MenusModule } from './menus/menus.module';
 
 @NgModule({
   declarations:[],
@@ -16,7 +17,8 @@ import { TablesModule } from "./tables/tables.module";
     DialogsModule,
     InputsModule,
     SelectModule,
-    TablesModule
-  ]
+    TablesModule,
+    MenusModule
+  ],
 })
 export class FinanEXPComponentsModule { }
