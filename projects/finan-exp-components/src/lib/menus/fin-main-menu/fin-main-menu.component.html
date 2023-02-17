@@ -11,3 +11,16 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </ng-container>
+
+<ng-container *ngIf="smallScreen">
+  <header>
+    <button id="menuButton" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Open menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </header>
+  
+  <mat-menu class="mat-menu" #menu="matMenu">
+    <nav-menu [navMenuItens]="navMenuItens" [smallScreen]="smallScreen"></nav-menu>
+  </mat-menu>
+  <router-outlet></router-outlet>
+</ng-container>

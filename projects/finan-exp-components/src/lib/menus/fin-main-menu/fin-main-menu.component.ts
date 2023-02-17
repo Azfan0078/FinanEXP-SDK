@@ -9,6 +9,9 @@ import { BreakpointState } from '@angular/cdk/layout';
   selector: 'fin-main-menu',
   templateUrl: './fin-main-menu.component.html',
   styleUrls: ['./styles/fin-main-menu.component.css'],
+  host: {
+    class: 'h-100 w-100',
+  },
 })
 export class FinMainMenuComponent implements OnDestroy {
   @Input() public navMenuItens!: Array<NavMenuItem>;

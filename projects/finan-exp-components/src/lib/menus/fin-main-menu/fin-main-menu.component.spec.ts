@@ -1,23 +1,58 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestUtils } from './../../../../../../cypress/support/test.utils';
 
 import { FinMainMenuComponent } from './fin-main-menu.component';
+import { NavButton } from './navButton';
+import { NavItem } from './navItem';
 
-describe('FinMainMenuComponent', () => {
-  let component: FinMainMenuComponent;
-  let fixture: ComponentFixture<FinMainMenuComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ FinMainMenuComponent ]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(FinMainMenuComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+describe('Verify container', () => {
+  const navMenuItens = [
+    new NavButton({
+      icon: 'add',
+      position: 'upper',
+      clickEvent: () => {
+        console.log('teste');
+      },
+    } as NavButton),
+    new NavItem({
+      label: TestUtils.mockStrings[0],
+      routerLink: '',
+      icon: 'input',
+      position: 'upper',
+    } as NavItem),
+    new NavItem({
+      label: TestUtils.mockStrings[1],
+      routerLink: '',
+      icon: '',
+      position: 'upper',
+    } as NavItem),
+  ];
+  it('Verify populate menu', () => {
+    cy.mount(FinMainMenuComponent, {
+      componentProperties: {
+        isExtended: true,
+        navMenuItens: navMenuItens,
+        smallScreen: false,
+      },
+    });
+    cy.get('div#upper').children().should('have.length', navMenuItens.length);
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('Test retract button', () => {
+    cy.mount(FinMainMenuComponent, {
+      componentProperties: {
+        isExtended: true,
+        navMenuItens: navMenuItens,
+        smallScreen: false,
+      },
+    });
+    cy.get('button#chevronButton').click();
+    cy.get('button#chevronButton mat-icon').should('not.have.class', 'rotated')
+    cy.get('mat-sidenav').should('have.css', 'visibility', 'hidden');
+
+    cy.get('button#chevronButton').click();
+    cy.get('button#chevronButton mat-icon').should('have.class', 'rotated')
+    cy.get('mat-sidenav').should('not.have.css', 'visibility', 'hidden');
   });
 });
+
+class PrivateUtils {}

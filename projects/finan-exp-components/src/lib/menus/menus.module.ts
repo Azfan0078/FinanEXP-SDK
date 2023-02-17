@@ -19,7 +19,6 @@ import { MatMenuModule } from '@angular/material/menu';
     CommonModule,
     MatSidenavModule,
     RouterModule,
-    MatSidenavModule,
     MatIconModule,
     MatListModule,
     MatMenuModule,
