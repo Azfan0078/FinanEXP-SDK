@@ -9,7 +9,9 @@
     "build:services": "ng build finan-exp-services",
     "build:common": "ng build finan-exp-common",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --component"
   },
   "private": false,
   "dependencies": {
@@ -43,6 +45,7 @@
     "@angular/cli": "~14.0.4",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
+    "cypress": "^12.5.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

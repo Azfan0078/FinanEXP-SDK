@@ -1,0 +1,76 @@
+<mat-nav-list *ngIf="processedItens">
+  <div id="upper">
+    <ng-container *ngFor="let upperItem of upperItens">
+      <fin-icon-button
+        *ngIf="isButton(upperItem) && upperItem.icon"
+        [icon]="upperItem.icon"
+        (click)="navButtonClickEvent(upperItem)"
+        [ngClass]="{bold:upperItem.isBold}"
+      ></fin-icon-button>
+      <mat-list-item
+        *ngIf="isNavItem(upperItem)"
+        [routerLink]="getRouterLink(upperItem)"
+        routerLinkActive="active"
+        [ngClass]="{bold:upperItem.isBold}"
+      >
+        <mat-icon *ngIf="upperItem.icon" mat-list-icon>{{
+          upperItem.icon
+        }}</mat-icon>
+        <span class="menu-item">{{ upperItem.label }}</span>
+      </mat-list-item>
+    </ng-container>
+  </div>
+
+  <div id="middle">
+    <ng-container *ngFor="let middleItem of middleItens">
+      <fin-icon-button
+        *ngIf="isButton(middleItem) && middleItem.icon"
+        [icon]="middleItem.icon"
+        (click)="navButtonClickEvent(middleItem)"
+        [ngClass]="{bold:middleItem.isBold}"
+      ></fin-icon-button>
+      <mat-list-item
+        *ngIf="isNavItem(middleItem)"
+        [routerLink]="getRouterLink(middleItem)"
+        routerLinkActive="active"
+        [ngClass]="{bold:middleItem.isBold}"
+      >
+        <mat-icon *ngIf="middleItem.icon" mat-list-icon>{{
+          middleItem.icon
+        }}</mat-icon>
+        <span class="menu-item">{{ middleItem.label }}</span>
+      </mat-list-item>
+    </ng-container>
+  </div>
+
+  <div id="down">
+    <ng-container *ngFor="let downItem of downItens">
+      <fin-icon-button
+        *ngIf="isButton(downItem) && downItem.icon"
+        [icon]="downItem.icon"
+        (click)="navButtonClickEvent(downItem)"
+        [ngClass]="{bold:downItem.isBold}"
+      ></fin-icon-button>
+      <mat-list-item
+        *ngIf="isNavItem(downItem)"
+        [routerLink]="getRouterLink(downItem)"
+        routerLinkActive="active"
+        [ngClass]="{bold:downItem.isBold}"
+      >
+        <mat-icon *ngIf="downItem.icon" mat-list-icon>{{
+          downItem.icon
+        }}</mat-icon>
+        <span class="menu-item">{{ downItem.label }}</span>
+      </mat-list-item>
+    </ng-container>
+  </div>
+
+  <button
+    *ngIf="smallScreen"
+    mat-icon-button
+    id="logoutButton"
+    (click)="logout()"
+  >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-nav-list>
