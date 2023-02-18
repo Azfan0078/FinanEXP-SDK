@@ -7,6 +7,7 @@
     "build:components": "ng build finan-exp-components",
     "build:pipes": "ng build finan-exp-pipes",
     "build:services": "ng build finan-exp-services",
+    "build:common": "ng build finan-exp-common",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

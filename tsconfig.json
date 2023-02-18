@@ -7,6 +7,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "paths": {
+      "finan-exp-common": [
+        "dist/finan-exp-common"
+      ],
       "finan-exp-components": [
         "dist/finan-exp-components"
       ],
