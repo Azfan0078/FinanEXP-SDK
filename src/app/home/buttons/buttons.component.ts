@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogControlService } from 'projects/finan-exp-sdk/src/lib/services';
 
 @Component({
   selector: 'app-buttons',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialogControlService:DialogControlService) { }
 
   ngOnInit(): void {
   }
-
+  public teste(){
+    this.dialogControlService.openConfirmationDialog('VAI CONFIRMAR OU NÃO ?')
+  }
 }

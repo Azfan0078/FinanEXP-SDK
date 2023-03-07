@@ -64,14 +64,14 @@ const imports = [
   TablesModule,
   MenusModule,
 ];
-const declarations = [NavMenuComponent];
+/* const declarations = []; */
 const providers: any = [];
 
 function customMount<T>(component: string | Type<T>, config?: MountConfig<T>) {
   if (!config) {
-    config = { declarations };
+    /* config = { declarations }; */
   } else {
-    config.declarations = [...(config?.declarations || []), ...declarations];
+    config.declarations = [...(config?.declarations || []), /* ...declarations */];
     config.imports = [...(config?.imports || []), ...imports];
     config.providers = [...(config?.providers || []), ...providers];
   }

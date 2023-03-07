@@ -1,7 +1,8 @@
-import { NavButton } from './../../../projects/finan-exp-components/src/lib/menus/fin-main-menu/navButton';
+
 import { Component } from '@angular/core';
-import { NavItem } from 'projects/finan-exp-components/src/lib/menus/fin-main-menu/navItem';
-import { NavMenuItem } from 'projects/finan-exp-components/src/lib/menus/fin-main-menu/navMenuItem';
+import { NavButton } from 'projects/finan-exp-sdk/src/lib/components/menus/fin-main-menu/navButton';
+import { NavItem } from 'projects/finan-exp-sdk/src/lib/components/menus/fin-main-menu/navItem';
+import { NavMenuItem } from 'projects/finan-exp-sdk/src/lib/components/menus/fin-main-menu/navMenuItem';
 
 @Component({
   selector: 'app-home',
@@ -24,11 +25,11 @@ export class HomeComponent {
         position: 'middle',
       } as NavItem),
       new NavItem({
-        label: 'Gabriel Di Domenico',
+        label: 'Buttons',
         routerLink: 'buttons',
-        icon: '',
-        position:'down',
-        isBold: true
+        icon: 'add',
+        position:'middle',
+        isBold: false
       } as NavItem),
       new NavButton({
         icon:'add',

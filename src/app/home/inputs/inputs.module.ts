@@ -1,5 +1,4 @@
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FinanEXPComponentsModule } from './../../../../projects/finan-exp-components/src/lib/finan-exp-components.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputsComponent } from './inputs.component';
@@ -10,6 +9,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { FinanEXPComponentsModule } from 'projects/finan-exp-sdk/src/lib/components';
 
 @NgModule({
   declarations: [InputsComponent],

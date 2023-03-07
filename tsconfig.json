@@ -16,6 +16,9 @@
       "finan-exp-pipes": [
         "dist/finan-exp-pipes"
       ],
+      "finan-exp-sdk": [
+        "dist/finan-exp-sdk"
+      ],
       "finan-exp-services": [
         "dist/finan-exp-services"
       ]
